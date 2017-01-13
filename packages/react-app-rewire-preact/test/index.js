@@ -1,6 +1,9 @@
 var test = require('tape');
 
-test('dummy test', function (t) {
+var rewirePreact = require('../index.js');
+
+test('Preact Rewire adds key', function (t) {
     t.plan(1);
-    t.equal(1, 1);
+    var config = rewirePreact({});
+    t.equal(config.hasOwnProperty('resolve'),true);
 });
